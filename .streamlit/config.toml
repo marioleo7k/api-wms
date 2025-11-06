@@ -1,6 +1,6 @@
 [theme]
-primaryColor = "#F63366"
-backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#F0F2F6"
-textColor = "#262730"
-font = "sans serif"
+primaryColor = "#005BAC"  # Azul corporativo SABESP
+backgroundColor = "#FFFFFF"  # Fundo branco
+secondaryBackgroundColor = "#F0F2F6"  # Fundo levemente cinza para seções
+textColor = "#262730"  # Texto escuro para contraste
+font = "sans serif"  # Fonte limpa e profissional
