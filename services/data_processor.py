@@ -85,6 +85,8 @@ def process_agendamentos_data(api_data: List[Dict]) -> pd.DataFrame:
             'dtconfirmacao' : 'Data Confirmação',
             'cnpj' : 'CNPJ',
             'razao' : 'Fornecedor',
+            # Algumas cargas podem vir como 'transportadora' ou 'nome_transportadora'
+            'nome_transportadora': 'Transportadora',
             'transportadora': 'Transportadora',
             'placa' : 'Placa do Veículo',
             'cnh' : 'CNH',
@@ -181,9 +183,9 @@ def filter_agendamentos(df: pd.DataFrame, filters: Dict) -> pd.DataFrame:
         filtered_df = filtered_df[filtered_df['dtagendamento'] <= filters['data_fim']]
     
     # Filtro por transportadora
-    if filters.get('transportadora') and 'nome_transportadora' in filtered_df.columns:
+    if filters.get('transportadora') and 'Transportadora' in filtered_df.columns:
         filtered_df = filtered_df[
-            filtered_df['nome_transportadora'].str.contains(
+            filtered_df['Transportadora'].str.contains(
                 filters['transportadora'], case=False, na=False
             )
         ]
