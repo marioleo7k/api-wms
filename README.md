@@ -14,7 +14,39 @@ Sistema de visualização e análise de agendamentos de materiais da SIGMA para 
 - **Exportação**: Download em CSV e Excel
 - **Carregamento Automático**: Dados carregados automaticamente ao iniciar
 
-## 🛠️ Tecnologias
+## Documentação das Colunas da API
+
+| Nome Original              | Nome Alterado                 | Tipagem   | Observação                                                                                         |
+| -------------------------- | ----------------------------- | --------- | ---------------------------------------------------------------------------------------------------- |
+| idagendamento              | ID                            | int/str   |                                                                                                      |
+| galpao                     | Depósito                     | str       |                                                                                                      |
+| dtcadastro                 | Data Cadastro                 | datetime  | Data que o fornecedor cadastrou a informação no sistema SIGMA                                      |
+| dtconfirmacao              | Data Confirmação            | datetime  |                                                                                                      |
+| cnpj                       | CNPJ                          | str       |                                                                                                      |
+| razao                      | Fornecedor                    | str       |                                                                                                      |
+| nome_transportadora        | Transportadora                | str       |                                                                                                      |
+| transportadora             | Transportadora                | str       |                                                                                                      |
+| placa                      | Placa do Veículo             | str       |                                                                                                      |
+| cnh                        | CNH                           | str       |                                                                                                      |
+| motorista                  | Motorista                     | str       |                                                                                                      |
+| dtagendamento              | Data Agendamento              | datetime  | Data informada pelo fornecedor que ele pretende entregar o material                                  |
+| dtalteracao                | Data Alteração              | datetime  | Data que teve alteração do registro da agenda                                                      |
+| dtconfirmada               | Data Confirmada               | datetime  | Confirmação do almoxarifado, garantindo a data de agendamento e horário que o fornecedor informou |
+| status                     | Status da Entrega             | str       |                                                                                                      |
+| tipo_veiculo               | Tipo de Veículo              | str       |                                                                                                      |
+| tipo_material              | Tipo de Material              | str       |                                                                                                      |
+| qnt_volume                 | Quantidade de Volume          | int/float |                                                                                                      |
+| peso                       | Peso (kg)                     | float     | Peso total da carga informado pelo fornecedor                                                        |
+| usuario                    | Usuário                      | str       |                                                                                                      |
+| observacao                 | Observação                  | str       |                                                                                                      |
+| justificativa_cancelamento | Justificativa do Cancelamento | str       | Justificativa inserida pelo almoxarifado                                                             |
+| pedidos                    | Pedidos                       | list      | Removida após expansão                                                                             |
+| pedido_numero              | Documento de Compra           | str       |                                                                                                      |
+| codigo_material            | Código do Material           | str       |                                                                                                      |
+| material                   | Descrição do Material       | str       |                                                                                                      |
+| quantidade_pedido          | Quantidade do Pedido          | int/float |                                                                                                      |
+
+## Tecnologias
 
 - **Streamlit** - Framework web
 - **Pandas** - Manipulação de dados
